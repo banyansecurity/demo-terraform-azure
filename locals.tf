@@ -1,7 +1,7 @@
 locals {
   name_prefix = "bnn-demo"
 
-  location = "westus2"
+  location = "westus3"
   ssh_key_name = "td-aws-us-east-1-dup"
 
   banyan_host = "https://team.console.banyanops.com/"
