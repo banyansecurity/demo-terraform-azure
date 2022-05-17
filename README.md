@@ -62,10 +62,10 @@ Clicking "Open" on your web application `bnn-demo-azure-web` will launch a new b
 
 ![Demo Website](_img/web.png)
 
-To SSH into the Linux server, click "Connect" on the SSH service `bnn-demo-azure-ssh`. Then run the SSH command with your key-pair as the credential: 
+To SSH into the Linux server, click "Connect" on the SSH service `bnn-demo-azure-ssh`. Then run the SSH command with your SSH key as the credential: 
 
 ```
-ssh -i YOUR_KEY_NAME adminuser@bnn-demo-azure-ssh
+ssh -i PATH_TO_SSH_KEY adminuser@bnn-demo-azure-ssh
 ```
 
 ![SSH Session](_img/ssh.png)
