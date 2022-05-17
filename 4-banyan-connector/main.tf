@@ -1,4 +1,4 @@
-module "aws_connector" {
+module "azure_connector" {
   source                 = "banyansecurity/banyan-connector/azure"
   version                = "0.0.1"
   

@@ -1,5 +1,5 @@
 locals {
-  name_prefix = "bnn-demo"
+  name_prefix = "bnn-demo-azure"
 
   location = "westus3"
   ssh_key_path = "~/.ssh/id_rsa.pub"

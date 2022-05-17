@@ -4,7 +4,12 @@ variable "name_prefix" {
 }
 
 variable "location" {
-  description = "Azure location"
+  description = "Azure Location"
+  type        = string
+}
+
+variable "resource_group_name" {
+  description = "Azure Resource Group"
   type        = string
 }
 
