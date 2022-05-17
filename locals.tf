@@ -2,9 +2,9 @@ locals {
   name_prefix = "bnn-demo"
 
   location = "westus3"
-  ssh_key_name = "td-aws-us-east-1-dup"
+  ssh_key_path = "~/.ssh/id_rsa.pub"
 
   banyan_host = "https://team.console.banyanops.com/"
-  banyan_api_key = "g6k08yZhQ1lWR_PDBsen_anY3BY4FzaizAR0GLMaMnM"
-  banyan_org = "tarunorg"
+  banyan_api_key = "YOUR_BANYAN_API_KEY"
+  banyan_org = "YOUR_BANYAN_ORG"
 }

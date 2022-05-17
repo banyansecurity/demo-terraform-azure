@@ -11,6 +11,10 @@ provider "azurerm" {
     features {}
 }
 
+# Managed DB with Private IP
+# https://github.com/hashicorp/terraform-provider-azurerm/blob/main/examples/private-endpoint/postgresql/main.tf
+#
+
 resource "azurerm_mysql_server" "_" {
   name                = "${var.name_prefix}-db"
   location            = var.location
@@ -19,7 +23,7 @@ resource "azurerm_mysql_server" "_" {
   administrator_login          = "banyan"
   administrator_login_password = "insecure123!@#"
 
-  sku_name   = "B_Gen5_2"
+  sku_name   = "GP_Gen5_2"
   storage_mb = 5120
   version    = "5.7"
 
@@ -33,4 +37,18 @@ resource "azurerm_mysql_server" "_" {
   tags = {
     env = "${var.name_prefix}"
   }  
+}
+
+resource "azurerm_private_endpoint" "_" {
+  name                = "${var.name_prefix}-pvt-ep"
+  location            = var.location
+  resource_group_name = var.resource_group_name
+  subnet_id           = var.subnet_id
+
+  private_service_connection {
+    name                           = "${var.name_prefix}-ep-db"
+    is_manual_connection           = false
+    private_connection_resource_id = azurerm_mysql_server._.id
+    subresource_names              = ["mysqlServer"]
+  }
 }

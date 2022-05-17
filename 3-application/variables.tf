@@ -8,14 +8,17 @@ variable "location" {
   type        = string
 }
 
-variable "cidr_vnet" {
-  description = "CIDR block for virtual network"
+variable "resource_group_name" {
+  description = "Resource group name"
   type        = string
-  default     = "192.168.0.0/16"
 }
 
-variable "cidr_subnet" {
-  description = "CIDR block for subnet where we install resources"
+variable "subnet_id" {
+  description = "Subnet ID"
   type        = string
-  default     = "192.168.1.0/24"
+}
+
+variable "ssh_key_path" {
+  description = "Path to SSH key"
+  type        = string
 }
