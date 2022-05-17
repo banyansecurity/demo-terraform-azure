@@ -6,7 +6,7 @@
 To run this demo, you will need the following:
 
 1. Azure account with credentials
-2. An SSH key-pair for authentication into Linux VMs we'll create
+2. An SSH key-pair for authentication into Linux VMs
 2. Terraform CLI 0.14.9+, configured for Azure provisioning
 3. Banyan account and admin API key, and a device with the Banyan Desktop App installed
 
